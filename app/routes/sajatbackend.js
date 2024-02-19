@@ -229,6 +229,7 @@ app.delete('/torles_marka_motorok', (req, res) => {
   })
   connection.end()
 })
+
   
 
 
