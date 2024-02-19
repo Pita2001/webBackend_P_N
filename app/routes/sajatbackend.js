@@ -150,6 +150,85 @@ app.delete('/torles_marka', (req, res) => {
   })
   connection.end()
 })
+
+
+
+
+/////Nikiééééééé
+
+app.get('/motorok', (req, res) => {
+  kapcsolat()
+  connection.query('SELECT * FROM motorok', (err, rows, fields) => {
+    if (err) {
+      console.error('Hiba a lekérdezés során: ' + err.stack);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+
+    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.get('/marka_motorok', (req, res) => {
+  kapcsolat()
+  connection.query('SELECT * FROM marka_motorok', (err, rows, fields) => {
+    if (err) {
+      console.error('Hiba a lekérdezés során: ' + err.stack);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+
+    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.get('/diagram_nikie', (req, res) => {
+  kapcsolat()
+  connection.query(`SELECT motor_modell, COUNT(*) as darabszam
+  FROM szavazat_motor
+  INNER JOIN motorok
+  ON motorok.motor_id=szavazat_motor.szavazat_m
+  GROUP BY motor_id`, (err, rows, fields) => {
+    if (err) {
+      console.error('Hiba a lekérdezés során: ' + err.stack);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+
+    console.log(rows);
+    res.send(rows);
+  });
+});
+
+app.delete('/torles_motorok', (req, res) => {
+  kapcsolat()
+  connection.query(`DELETE FROM motorok WHERE motor_id=${req.body.bevitel1}`, function (err, rows, fields) {
+    if (err) {
+      console.log("Hiba!")
+      res.send("Hiba!")
+    } else {
+      console.log("A törlés sikerült!")
+      res.send("A törlés sikerült!")
+    }
+  })
+  connection.end()
+})
+
+app.delete('/torles_marka_motorok', (req, res) => {
+  kapcsolat()
+  connection.query(`DELETE FROM marka_motorok WHERE marka_id=${req.body.bevitel2}`, function (err, rows, fields) {
+    if (err) {
+      console.log("Hiba!")
+      res.send("Hiba!")
+    } else {
+      console.log("A törlés sikerült!")
+      res.send("A törlés sikerült!")
+    }
+  })
+  connection.end()
+})
   
 
 
