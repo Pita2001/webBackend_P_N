@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Feb 19. 11:09
+-- Létrehozás ideje: 2024. Már 12. 13:47
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `web_zaro_niki_peti`
 --
-CREATE DATABASE IF NOT EXISTS `web_zaro_niki_peti` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
-USE `web_zaro_niki_peti`;
 
 -- --------------------------------------------------------
 
@@ -44,20 +42,41 @@ CREATE TABLE `autok` (
 --
 
 INSERT INTO `autok` (`auto_id`, `auto_marka`, `auto_modell`, `auto_evjarat`, `auto_hengerurt`, `auto_uzema`, `auto_kep`) VALUES
-(1, 1, 'Honda Civic', 2007, 1800, 'Benzin', 'Honda_civic.jpg'),
-(2, 1, 'Honda Accord', 2006, 1800, 'Benzin', 'Honda_accord.jpg'),
-(3, 2, 'Suzuki Ignis', 2006, 1300, 'Benzin', 'Suzuki_Ignis.jpg'),
-(4, 2, 'Suzuki Swift', 2006, 1200, 'Benzin', 'Suzuki_Swift.jpg'),
-(5, 3, 'Nissan 350 Z', 2006, 3500, 'Benzin', 'Nissan_350Z.jpg'),
-(6, 3, 'Nissan Navara', 2008, 2500, 'Dízel', 'Nissan_Navara.jpg'),
-(7, 4, 'Mazda XC-5', 2013, 2100, 'Dízel', 'Mazda_CX-5.jpg'),
-(8, 4, 'Mazda_MX-5', 1995, 1800, 'Benzin', 'Mazda_MX-5.jpg'),
-(9, 5, 'Subaru Legacy', 2004, 1500, 'Benzin', 'Subaru_Legacy.jpg'),
-(10, 5, 'Subaru Baja', 2003, 2500, 'Benzin', 'Subaru_Baja.jpg'),
-(11, 6, 'Toyota GT86', 2013, 2000, 'Benzin', 'Toyota_GT86.jpg'),
-(12, 6, 'Toyota Celica', 1991, 1500, 'Benzin', 'Toyota_Celica.jpg'),
-(13, 7, 'Mitsubishi 3000 GT', 1994, 3000, 'Benzin', 'Mitsubishi_3000_GT.jpg'),
-(14, 7, 'Mitsubishi Galant', 1998, 2500, 'Benzin', 'Mitsubishi_Galant.jpg');
+(1, 1, 'Civic', 2007, 1800, 'Benzin', 'Honda_civic.jpg'),
+(2, 1, 'Accord', 2006, 1800, 'Benzin', 'Honda_accord.jpg'),
+(3, 2, 'Ignis', 2006, 1300, 'Benzin', 'Suzuki_Ignis.jpg'),
+(4, 2, 'Swift', 2006, 1200, 'Benzin', 'Suzuki_Swift.jpg'),
+(5, 3, '350 Z', 2006, 3500, 'Benzin', 'Nissan_350Z.jpg'),
+(6, 3, 'Navara', 2008, 2500, 'Dízel', 'Nissan_Navara.jpg'),
+(7, 4, 'XC-5', 2013, 2100, 'Dízel', 'Mazda_CX-5.jpg'),
+(8, 4, 'MX-5', 1995, 1800, 'Benzin', 'Mazda_MX-5.jpg'),
+(9, 5, 'Legacy', 2004, 1500, 'Benzin', 'Subaru_Legacy.jpg'),
+(10, 5, 'Baja', 2003, 2500, 'Benzin', 'Subaru_Baja.jpg'),
+(11, 6, 'GT86', 2013, 2000, 'Benzin', 'Toyota_GT86.jpg'),
+(12, 6, 'Celica', 1991, 1500, 'Benzin', 'Toyota_Celica.jpg'),
+(13, 7, '3000 GT', 1994, 3000, 'Benzin', 'Mitsubishi_3000_GT.jpg'),
+(14, 7, 'Galant', 1998, 2500, 'Benzin', 'Mitsubishi_Galant.jpg'),
+(15, 1, 'JAZZ', 2004, 1400, 'Benzin', 'Honda_Jazz.jpg'),
+(18, 1, 'LEGEND', 1996, 3500, 'Benzin', 'honda_legend.jpg'),
+(21, 1, 'CR-V', 2009, 2000, 'Benzin', 'honda_cr_v.jpg'),
+(24, 2, 'Baleno', 2016, 1200, 'Benzin', 'suzuki-baleno.jpg'),
+(27, 2, 'Jimmy', 2007, 1500, 'Dízel', 'Suzuki-Jimmy.jpg'),
+(30, 2, 'SX4', 2008, 1600, 'Dízel', 'Suzuki-sx4.jpg'),
+(33, 3, 'QASHQAI', 2011, 1500, 'Dízel', 'nissan-qashqai.jpg'),
+(36, 3, 'X-TRAIL', 2016, 1600, 'Dízel', 'nissan-x-trail.jpg'),
+(39, 3, 'Micra', 2005, 1500, 'Dízel', 'nissan-micra.jpg'),
+(42, 4, 'Mazda-6', 2011, 2200, 'Dízel', 'mazda-6.jpg'),
+(45, 4, 'Mazda-3', 2014, 2000, 'Dízel', 'mazda-3.jpg'),
+(48, 4, 'PREMACY', 2002, 2000, 'Dízel', 'mazda-premacy.jpg'),
+(51, 5, 'Impreza', 1993, 1800, 'Dízel', 'subaru-impreza.jpg'),
+(54, 5, 'OUTBACK', 2014, 2000, 'Dízel', 'subaru-outback.jpg'),
+(57, 5, 'Justy', 1986, 1000, 'Dízel', 'subaru-justy.jpg'),
+(60, 6, 'AYGO', 2007, 1000, 'Benzin', 'toyota-aygo.jpg'),
+(63, 6, 'Auris', 2008, 1300, 'Dízel', 'toyota-auris.jpg'),
+(66, 6, 'IQ', 2010, 1000, 'Benzin', 'Toyota-iQ.jpg'),
+(69, 7, 'Outlander', 2003, 2000, 'Benzin', 'Mitsubishi-Outlander.jpg'),
+(72, 7, 'asx', 2011, 1800, 'Dízel', 'mitsubishi-asx.jpg'),
+(75, 7, 'ECLIPSE', 2001, 3000, 'Benzin', 'mitsubishi-eclipse.jpg');
 
 -- --------------------------------------------------------
 
@@ -197,16 +216,26 @@ CREATE TABLE `motorok` (
 --
 
 INSERT INTO `motorok` (`motor_id`, `motor_marka`, `motor_modell`, `motor_evjarat`, `motor_hengerurt`, `motor_uzema`, `motor_kep`) VALUES
-(1, 1, 'Ninja ', 2010, 400, 'Benzin', 'Ninja400.jpg'),
-(2, 2, 'CBF 125M', 2009, 125, 'Benzin', 'Honda.jpg'),
-(3, 1, 'Ninja', 2010, 300, 'Benzin', 'Ninja650.jpg'),
+(1, 1, 'Ninja 400', 2010, 400, 'Benzin', 'Ninja400.jpg'),
+(3, 1, 'Ninja 300', 2010, 300, 'Benzin', 'Ninja650.jpg'),
 (4, 2, 'CBR 600', 2016, 600, 'Benzin', 'Hondacbr600.jpg'),
-(5, 3, 'Suzuki-GSXR', 2010, 600, 'Benzin', 'SuzukiR600.jpg'),
-(6, 3, 'Suzuki-GSXR', 2007, 1000, 'Benzin', 'Suzuki1000.jpg'),
-(7, 4, 'Yamaha-R1', 2010, 700, 'Benzin', 'YamahaR1.jpg'),
-(8, 4, 'Yamaha-R6', 2014, 600, 'Benzin', 'YamahaR6.jpg'),
-(11, 4, 'HDHSZHTSEHSEZHSETZSE', 2016, 125, 'bENZIN', 'UIHREJGA.jpg'),
-(12, 2, 'gtedahahae', 2010, 400, 'eraggr', 'fewF.jpg');
+(5, 3, 'GSXR 600', 2010, 600, 'Benzin', 'SuzukiR600.jpg'),
+(6, 3, 'GSXR 1000', 2007, 1000, 'Benzin', 'Suzuki1000.jpg'),
+(7, 4, 'R1', 2010, 700, 'Benzin', 'YamahaR1.jpg'),
+(8, 4, 'R6', 2014, 600, 'Benzin', 'YamahaR6.jpg'),
+(9, 1, 'Ninja H2', 2023, 1000, 'Benzin', 'KawasakiH2.jpg'),
+(12, 1, 'XR-6R', 2017, 600, 'Benzin', 'KawasakiXR-6R.jpg'),
+(15, 1, 'Z750R', 2018, 750, 'Benzin', 'KawasakiZ750R.jpg'),
+(18, 2, 'CBR 500', 2018, 500, 'Benzin', 'HondaCBR500.jpg'),
+(21, 2, 'CBR 650R', 2020, 650, 'Benzin', 'HondaCBR650R.jpg'),
+(24, 2, 'CBR 900RR', 2023, 900, 'Benzin', 'HondaCBR900RR.jpg'),
+(27, 2, 'CBR 1000RR-R', 2015, 1000, 'Benzin', 'HondaCBR1000RR-R.jpg'),
+(30, 3, 'GSX-8R', 2016, 750, 'Benzin', 'GSX-8R.jpg'),
+(33, 3, 'GSX-R125', 2019, 125, 'Benzin', 'GSX-R125.jpg'),
+(36, 3, 'GSX-R 750', 2023, 750, 'Benzin', 'GSX-R-750.jpg'),
+(39, 4, 'R3', 2019, 300, 'Benzin', 'Yamaha-R3.jpg'),
+(42, 4, 'R7', 2022, 700, 'Benzin', 'Yamaha-R7.jpg'),
+(45, 4, 'YZF-R125', 2023, 125, 'Benzin', 'Yamaha-YZF-R125.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,6 +258,34 @@ INSERT INTO `roles` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 (1, 'user', '2020-08-02 14:57:31', '2020-08-02 14:57:31'),
 (2, 'moderator', '2020-08-02 14:57:31', '2020-08-02 14:57:31'),
 (3, 'admin', '2020-08-02 14:57:31', '2020-08-02 14:57:31');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `szavazat_auto`
+--
+
+CREATE TABLE `szavazat_auto` (
+  `szavazat_id` int(11) NOT NULL,
+  `szavazat_a` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `szavazat_auto`
+--
+
+INSERT INTO `szavazat_auto` (`szavazat_id`, `szavazat_a`) VALUES
+(1, 1),
+(2, 2),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 2),
+(8, 1),
+(9, 1),
+(10, 3),
+(11, 1);
 
 -- --------------------------------------------------------
 
@@ -361,6 +418,12 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `szavazat_auto`
+--
+ALTER TABLE `szavazat_auto`
+  ADD PRIMARY KEY (`szavazat_id`);
+
+--
 -- A tábla indexei `szavazat_motor`
 --
 ALTER TABLE `szavazat_motor`
@@ -387,7 +450,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT a táblához `autok`
 --
 ALTER TABLE `autok`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT a táblához `auto_kepek`
@@ -411,7 +474,7 @@ ALTER TABLE `kepek_motor`
 -- AUTO_INCREMENT a táblához `marka`
 --
 ALTER TABLE `marka`
-  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT a táblához `marka_motorok`
@@ -423,7 +486,13 @@ ALTER TABLE `marka_motorok`
 -- AUTO_INCREMENT a táblához `motorok`
 --
 ALTER TABLE `motorok`
-  MODIFY `motor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `motor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT a táblához `szavazat_auto`
+--
+ALTER TABLE `szavazat_auto`
+  MODIFY `szavazat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT a táblához `szavazat_motor`
@@ -435,7 +504,7 @@ ALTER TABLE `szavazat_motor`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Megkötések a kiírt táblákhoz
