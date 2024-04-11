@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Már 12. 13:47
+-- Létrehozás ideje: 2024. Ápr 11. 12:55
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -76,7 +76,9 @@ INSERT INTO `autok` (`auto_id`, `auto_marka`, `auto_modell`, `auto_evjarat`, `au
 (66, 6, 'IQ', 2010, 1000, 'Benzin', 'Toyota-iQ.jpg'),
 (69, 7, 'Outlander', 2003, 2000, 'Benzin', 'Mitsubishi-Outlander.jpg'),
 (72, 7, 'asx', 2011, 1800, 'Dízel', 'mitsubishi-asx.jpg'),
-(75, 7, 'ECLIPSE', 2001, 3000, 'Benzin', 'mitsubishi-eclipse.jpg');
+(75, 7, 'ECLIPSE', 2001, 3000, 'Benzin', 'mitsubishi-eclipse.jpg'),
+(78, 7, 'pelda1', 1, 1, 'pelda1', ''),
+(79, 7, 'pelda2', 2, 2, 'pelda2', '');
 
 -- --------------------------------------------------------
 
@@ -168,7 +170,9 @@ INSERT INTO `marka` (`marka_id`, `marka_nev`, `marka_kepek`) VALUES
 (4, 'Mazda', 'Mazda.jpg'),
 (5, 'Subaru', 'Subaru.jpg'),
 (6, 'Toyota', 'Toyota.jpg'),
-(7, 'Mitsubishi', 'Mitsubishi.jpg');
+(7, 'Mitsubishi', 'Mitsubishi.jpg'),
+(41, 'pelda1', ''),
+(42, 'pelda2', '');
 
 -- --------------------------------------------------------
 
@@ -193,7 +197,9 @@ INSERT INTO `marka_motorok` (`marka_id`, `marka_nev`, `marka_kepek`) VALUES
 (4, 'Yamaha', 'Yamaha.jpg'),
 (5, 'hth', 'htah'),
 (6, 'hta', 'htea'),
-(7, 'gteah', 'hteah');
+(7, 'gteah', 'hteah'),
+(11, 'pelda', ''),
+(12, 'pelda2', '');
 
 -- --------------------------------------------------------
 
@@ -235,7 +241,9 @@ INSERT INTO `motorok` (`motor_id`, `motor_marka`, `motor_modell`, `motor_evjarat
 (36, 3, 'GSX-R 750', 2023, 750, 'Benzin', 'GSX-R-750.jpg'),
 (39, 4, 'R3', 2019, 300, 'Benzin', 'Yamaha-R3.jpg'),
 (42, 4, 'R7', 2022, 700, 'Benzin', 'Yamaha-R7.jpg'),
-(45, 4, 'YZF-R125', 2023, 125, 'Benzin', 'Yamaha-YZF-R125.jpg');
+(45, 4, 'YZF-R125', 2023, 125, 'Benzin', 'Yamaha-YZF-R125.jpg'),
+(48, 4, 'pelda1', 1, 1, 'pelda1', ''),
+(49, 4, 'pelda2', 2, 2, 'pelda2', '');
 
 -- --------------------------------------------------------
 
@@ -450,7 +458,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT a táblához `autok`
 --
 ALTER TABLE `autok`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT a táblához `auto_kepek`
@@ -474,19 +482,19 @@ ALTER TABLE `kepek_motor`
 -- AUTO_INCREMENT a táblához `marka`
 --
 ALTER TABLE `marka`
-  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT a táblához `marka_motorok`
 --
 ALTER TABLE `marka_motorok`
-  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `marka_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT a táblához `motorok`
 --
 ALTER TABLE `motorok`
-  MODIFY `motor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `motor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT a táblához `szavazat_auto`
